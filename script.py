@@ -11,7 +11,6 @@ def merge(arr, left, mid, right):
 
     left_half = [0] * n1
     right_half = [0] * n2
-
     for i in range(n1):
         left_half[i] = arr[left + i]
     for j in range(n2):
@@ -56,7 +55,9 @@ def print_list(arr):
     for i in arr:
         print(i, end=" ")
     print()
-    if __name__ == "__main__":
+
+# Test the merge_sort function
+if __name__ == "__main__":
     array = [12, 81, 33, 55, 6, 71]
     merge_sort(array, 0, len(array) - 1)
     print_list(array)

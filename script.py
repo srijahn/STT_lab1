@@ -1,4 +1,11 @@
+"""
+This module implements the merge sort algorithm and demonstrates its usage.
+"""
+
 def merge(arr, left, mid, right):
+    """
+    Merge two halves of an array in sorted order.
+    """
     n1 = mid - left + 1
     n2 = right - mid
 
@@ -9,11 +16,9 @@ def merge(arr, left, mid, right):
         left_half[i] = arr[left + i]
     for j in range(n2):
         right_half[j] = arr[mid + 1 + j]
-
-    i = 0  
-    j = 0 
-    k = left  
-
+    i = 0
+    j = 0
+    k = left
     while i < n1 and j < n2:
         if left_half[i] <= right_half[j]:
             arr[k] = left_half[i]
@@ -34,6 +39,9 @@ def merge(arr, left, mid, right):
         k += 1
 
 def merge_sort(arr, left, right):
+    """
+    Perform merge sort on the array.
+    """
     if left < right:
         mid = (left + right) // 2
 
@@ -42,12 +50,13 @@ def merge_sort(arr, left, right):
         merge(arr, left, mid, right)
 
 def print_list(arr):
+    """
+    Print elements of the array.
+    """
     for i in arr:
         print(i, end=" ")
     print()
-
-# Test the merge_sort function
-if __name__ == "__main__":
+    if __name__ == "__main__":
     array = [12, 81, 33, 55, 6, 71]
     merge_sort(array, 0, len(array) - 1)
     print_list(array)

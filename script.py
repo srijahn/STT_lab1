@@ -56,7 +56,6 @@ def print_list(arr):
         print(i, end=" ")
     print()
 
-# Test the merge_sort function
 if __name__ == "__main__":
     array = [12, 81, 33, 55, 6, 71]
     merge_sort(array, 0, len(array) - 1)

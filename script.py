@@ -10,7 +10,7 @@ def merge(arr, left, mid, right):
     n2 = right - mid
 
     left_half = [0] * n1
-    right_half = [0] * n2        
+    right_half = [0] * n2
     for i in range(n1):
         left_half[i] = arr[left + i]
     for j in range(n2):
